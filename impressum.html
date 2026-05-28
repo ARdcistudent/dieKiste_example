@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="André Rühmling | Mr. U. N. Own">
+
+  <title>Impressum | Die Kiste</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root{
+      --mustard:#c89b2b;
+      --mustard-hover:#a67f1f;
+      --brown:#3b2a1f;
+      --dark:#241812;
+      --light:#f7f1e6;
+      --white:#ffffff;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Roboto', sans-serif;
+      background:var(--light);
+      color:var(--dark);
+      line-height:1.7;
+      overflow-x:hidden;
+    }
+
+    h1,h2,h3,h4{
+      font-family:"Lucida Console", "Courier New", monospace;
+      letter-spacing:1px;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    nav{
+      position:fixed;
+      width:100%;
+      top:0;
+      z-index:1000;
+      background:rgba(36,24,18,0.92);
+      backdrop-filter:blur(8px);
+
+      padding:18px 8%;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      transition:0.3s;
+    }
+
+    nav .logo{
+      color:var(--mustard);
+      font-size:2rem;
+      font-family:'Oswald', sans-serif;
+      font-weight:600;
+    }
+
+    nav ul{
+      display:flex;
+      gap:28px;
+      list-style:none;
+    }
+
+    nav ul li a{
+      color:white;
+      transition:0.3s;
+      font-weight:500;
+    }
+
+    nav ul li a:hover{
+      color:var(--mustard);
+    }
+
+    /* =========================
+       MAIN
+    ========================== */
+
+    main{
+      padding:160px 10% 100px;
+      min-height:100vh;
+    }
+
+    .impressum-wrapper{
+      max-width:1000px;
+      margin:0 auto;
+
+      background:white;
+
+      padding:60px;
+
+      border-radius:22px;
+
+      box-shadow:
+      0 10px 35px rgba(0,0,0,0.08);
+    }
+
+    .page-title{
+      margin-bottom:50px;
+      text-align:center;
+    }
+
+    .page-title h1{
+      font-size:3.5rem;
+      color:var(--brown);
+      margin-bottom:15px;
+    }
+
+    .page-title p{
+      color:#666;
+      font-size:1.05rem;
+    }
+
+    /* =========================
+       CONTENT BLOCKS
+    ========================== */
+
+    .block{
+      margin-bottom:50px;
+    }
+
+    .block:last-child{
+      margin-bottom:0;
+    }
+
+    .block h2{
+      color:var(--mustard);
+      margin-bottom:20px;
+      font-size:1.8rem;
+    }
+
+    .block p{
+      margin-bottom:18px;
+    }
+
+    .block a{
+      color:var(--mustard);
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .block a:hover{
+      color:var(--mustard-hover);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer{
+      background:var(--dark);
+      color:white;
+      padding:50px 10%;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:35px;
+    }
+
+    footer h4{
+      color:var(--mustard);
+      margin-bottom:15px;
+      font-size:1.2rem;
+    }
+
+    footer ul{
+      list-style:none;
+    }
+
+    footer ul li{
+      margin-bottom:10px;
+    }
+
+    footer a:hover{
+      color:var(--mustard);
+    }
+
+    .copyright{
+      margin-top:40px;
+      text-align:center;
+      opacity:0.7;
+      font-size:0.9rem;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media(max-width:900px){
+
+      nav{
+        flex-direction:column;
+        gap:14px;
+      }
+
+      nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .impressum-wrapper{
+        padding:40px 30px;
+      }
+
+      .page-title h1{
+        font-size:2.6rem;
+      }
+    }
+
+    @media(max-width:600px){
+
+      main{
+        padding:190px 5% 70px;
+      }
+
+      .impressum-wrapper{
+        padding:30px 22px;
+      }
+
+      .page-title h1{
+        font-size:2rem;
+      }
+
+      .block h2{
+        font-size:1.4rem;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <div class="logo">
+      <a href="./index.html">
+        Die Kiste
+      </a>
+    </div>
+
+    <ul>
+      <li><a href="./index.html#about">Über uns</a></li>
+      <li><a href="./index.html#gallery">Impressionen</a></li>
+      <li><a href="./index.html#info">Infos</a></li>
+      <li><a href="./index.html#contact">Kontakt</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- MAIN -->
+
+  <main>
+
+    <div class="impressum-wrapper">
+
+      <div class="page-title">
+        <h1>Impressum</h1>
+        <p>Angaben gemäß § 5 TMG</p>
+      </div>
+
+      <div class="block">
+
+        <h2>Angaben gemäß § 5 TMG</h2>
+
+        <p>
+          Jasmin Wolff<br>
+          Nusser Str. 7<br>
+          23898 Kühsen
+        </p>
+
+      </div>
+
+      <div class="block">
+
+        <h2>Kontakt</h2>
+
+        <p>
+          Telefon: +49 (0) 451 88313294<br>
+          E-Mail:
+          <a href="mailto:sziggys-bar@gmx.de">
+            sziggys-bar@gmx.de
+          </a>
+        </p>
+
+      </div>
+
+      <div class="block">
+
+        <h2>USt-ID</h2>
+
+        <p>
+          DE324794472
+        </p>
+
+      </div>
+
+      <div class="block">
+
+        <h2>
+          Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
+        </h2>
+
+        <p>
+          Jasmin Wolff<br>
+          Nusser Str. 7<br>
+          23898 Kühsen
+        </p>
+
+      </div>
+
+      <div class="block">
+
+        <h2>Streitbeilegung</h2>
+
+        <p>
+          Wir sind nicht bereit oder verpflichtet,
+          an Streitbeilegungsverfahren vor einer
+          Verbraucherschlichtungsstelle teilzunehmen.
+        </p>
+
+      </div>
+
+      <div class="block">
+
+        <h2>Haftung für Inhalte</h2>
+
+        <p>
+          Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG
+          für eigene Inhalte auf diesen Seiten nach den
+          allgemeinen Gesetzen verantwortlich.
+        </p>
+
+        <p>
+          Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter
+          jedoch nicht verpflichtet, übermittelte oder
+          gespeicherte fremde Informationen zu überwachen
+          oder nach Umständen zu forschen, die auf eine
+          rechtswidrige Tätigkeit hinweisen.
+        </p>
+
+        <p>
+          Verpflichtungen zur Entfernung oder Sperrung
+          der Nutzung von Informationen nach den allgemeinen
+          Gesetzen bleiben hiervon unberührt.
+        </p>
+
+      </div>
+
+      <div class="block">
+
+        <h2>Haftung für Links</h2>
+
+        <p>
+          Unser Angebot enthält Links zu externen Websites
+          Dritter, auf deren Inhalte wir keinen Einfluss haben.
+        </p>
+
+        <p>
+          Deshalb können wir für diese fremden Inhalte
+          auch keine Gewähr übernehmen.
+        </p>
+
+      </div>
+
+      <div class="block">
+
+        <h2>Urheberrecht</h2>
+
+        <p>
+          Die durch die Seitenbetreiber erstellten Inhalte
+          und Werke auf diesen Seiten unterliegen dem
+          deutschen Urheberrecht.
+        </p>
+
+        <p>
+          Downloads und Kopien dieser Seite sind nur für
+          den privaten, nicht kommerziellen Gebrauch gestattet.
+        </p>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+
+        <h4>Die Kiste</h4>
+
+        <p>
+          Musikkneipe & Bierkultur in Lübeck.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h4>Kontakt</h4>
+
+        <ul>
+          <li>info@diekiste.de</li>
+          <li>0451 123456</li>
+        </ul>
+
+      </div>
+
+      <div>
+
+        <h4>Navigation</h4>
+
+        <ul>
+          <li><a href="./index.html">Startseite</a></li>
+          <li><a href="./datasec.html">Datenschutz</a></li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 Die Kiste – Alle Rechte vorbehalten.
+    </div>
+
+  </footer>
+
+</body>
+</html>

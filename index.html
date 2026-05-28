@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="André Rühmling | Mr. U. N. Own">
+  <title>Die Kiste – Musikkneipe & Bierkultur</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root{
+      --mustard: #c89b2b;
+      --mustard-hover: #a67f1f;
+      --brown: #3b2a1f;
+      --dark: #241812;
+      --light: #f7f1e6;
+      --white: #ffffff;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Roboto', sans-serif;
+      background:var(--light);
+      color:var(--dark);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    h1,h2,h3{
+      font-family: "Lucida Console", "Courier New", monospace;
+      /* font-family:'Oswald', sans-serif; */
+      letter-spacing:1px;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    nav{
+      position:fixed;
+      width:100%;
+      top:0;
+      z-index:1000;
+      background:rgba(36,24,18,0.92);
+      backdrop-filter:blur(8px);
+
+      padding:18px 8%;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      transition:0.3s;
+    }
+
+    nav .logo{
+      color:var(--mustard);
+      font-size:2rem;
+      font-family:'Oswald', sans-serif;
+      font-weight:600;
+    }
+
+    nav ul{
+      display:flex;
+      gap:28px;
+      list-style:none;
+    }
+
+    nav ul li a{
+      color:white;
+      transition:0.3s;
+      font-weight:500;
+    }
+
+    nav ul li a:hover{
+      color:var(--mustard);
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero{
+      min-height:100vh;
+
+      background:
+      linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+      url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1600&auto=format&fit=crop') center/cover;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      text-align:center;
+      color:white;
+
+      padding:140px 20px 80px;
+    }
+
+    .hero-content{
+      max-width:900px;
+      animation:fadeIn 1.2s ease;
+    }
+
+    /* SVG LOGO */
+
+    .hero-logo{
+      width:min(520px, 80vw);
+      max-height:240px;
+
+      object-fit:contain;
+      margin:0 auto 30px;
+
+      filter:
+        drop-shadow(0 0 20px rgba(200,155,43,0.25));
+
+      animation:float 5s ease-in-out infinite;
+    }
+
+    /* Fallback H1 */
+
+    .hero h1{
+      font-size:5rem;
+      color:var(--mustard);
+      margin-bottom:25px;
+      text-transform:uppercase;
+    }
+
+    .hero p{
+      font-size:1.35rem;
+      max-width:700px;
+      margin:0 auto 35px;
+      color:rgba(255,255,255,0.92);
+    }
+
+    .btn{
+      background:var(--mustard);
+      color:var(--dark);
+
+      padding:15px 35px;
+      border-radius:999px;
+
+      font-weight:bold;
+
+      transition:0.3s;
+      display:inline-block;
+    }
+
+    .btn:hover{
+      background:var(--mustard-hover);
+      transform:translateY(-3px);
+    }
+
+    /* =========================
+       SECTION
+    ========================== */
+
+    section{
+      padding:100px 10%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:3rem;
+      color:var(--brown);
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:18px;
+
+      box-shadow:
+      0 10px 35px rgba(0,0,0,0.18);
+    }
+
+    .about-text p{
+      margin-bottom:22px;
+      font-size:1.1rem;
+    }
+
+    /* =========================
+       GALLERY
+    ========================== */
+
+    .gallery{
+      background:var(--brown);
+      color:white;
+    }
+
+    .gallery .section-title h2{
+      color:white;
+    }
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:22px;
+    }
+
+    .gallery-grid img{
+      width:100%;
+      height:260px;
+
+      object-fit:cover;
+
+      border-radius:14px;
+
+      transition:0.4s;
+    }
+
+    .gallery-grid img:hover{
+      transform:scale(1.03);
+    }
+
+    /* =========================
+       INFO
+    ========================== */
+
+    .info-container{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+    }
+
+    .card{
+      background:white;
+      padding:45px;
+      border-radius:18px;
+
+      box-shadow:
+      0 8px 30px rgba(0,0,0,0.08);
+    }
+
+    .card h3{
+      color:var(--mustard);
+      margin-bottom:22px;
+      font-size:2rem;
+    }
+
+    .hours p{
+      margin-bottom:12px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer{
+      background:var(--dark);
+      color:white;
+      padding:60px 10%;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:35px;
+    }
+
+    footer h4{
+      color:var(--mustard);
+      margin-bottom:15px;
+      font-size:1.3rem;
+    }
+
+    footer ul{
+      list-style:none;
+    }
+
+    footer ul li{
+      margin-bottom:10px;
+    }
+
+    footer a:hover{
+      color:var(--mustard);
+    }
+
+    .copyright{
+      margin-top:45px;
+      text-align:center;
+      opacity:0.7;
+      font-size:0.9rem;
+    }
+
+    /* =========================
+       ANIMATIONS
+    ========================== */
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(25px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0px);
+      }
+
+      50%{
+        transform:translateY(-8px);
+      }
+
+      100%{
+        transform:translateY(0px);
+      }
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media(max-width:900px){
+
+      .hero h1{
+        font-size:3.2rem;
+      }
+
+      .hero-logo{
+        max-height:180px;
+      }
+
+      .about,
+      .info-container{
+        grid-template-columns:1fr;
+      }
+
+      nav{
+        flex-direction:column;
+        gap:14px;
+      }
+
+      nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+    }
+
+    @media(max-width:600px){
+
+      .hero{
+        padding-top:180px;
+      }
+
+      .hero h1{
+        font-size:2.4rem;
+      }
+
+      .hero p{
+        font-size:1.05rem;
+      }
+
+      .section-title h2{
+        font-size:2.2rem;
+      }
+
+      .card{
+        padding:30px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <div class="logo">
+      <a href="#">
+        Die Kiste
+      </a>
+    </div>
+
+    <ul>
+      <li><a href="#about">Über uns</a></li>
+      <li><a href="#gallery">Impressionen</a></li>
+      <li><a href="#info">Infos</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <!-- PNG LOGO -->
+      <img
+        src="./logo_die_kiste.png"
+        alt="Die Kiste Logo"
+        class="hero-logo"
+
+        onerror="this.style.display='none'; document.getElementById('fallback-title').style.display='block';"
+      >
+
+      <!-- FALLBACK -->
+      <h1 id="fallback-title" style="display:none;">
+        Die Kiste
+      </h1>
+
+      <p>
+        Deine Musikkneipe für ehrliches Bier,
+        gute Gespräche und legendäre Abende.
+      </p>
+
+      <a href="#info" class="btn">
+        Jetzt vorbeikommen
+      </a>
+
+    </div>
+
+  </header>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="section-title">
+      <h2>Musik. Bier. Atmosphäre.</h2>
+    </div>
+
+    <div class="about">
+
+      <img
+        src="https://images.unsplash.com/photo-1525268323446-0505b6fe7778?q=80&w=1200&auto=format&fit=crop"
+        alt="Bar"
+      >
+
+      <div class="about-text">
+
+        <p>
+          Willkommen in der Musikkneipe
+          <strong>Die Kiste</strong> –
+          der urigen Bierpub mit Charakter.
+        </p>
+
+        <p>
+          Bei uns treffen handverlesene Musik,
+          frisch gezapftes Bier und echte
+          Kneipenatmosphäre aufeinander.
+        </p>
+
+        <p>
+          Egal ob Feierabendbier,
+          Live-Musik-Abend oder lange Nacht
+          mit Freunden – hier wird jeder
+          Abend besonders.
+        </p>
+
+        <a href="#gallery" class="btn">
+          Impressionen ansehen
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- GALLERY -->
+
+  <section class="gallery" id="gallery">
+
+    <div class="section-title">
+      <h2>Impressionen</h2>
+    </div>
+
+    <div class="gallery-grid">
+
+      <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1200&auto=format&fit=crop" alt="">
+
+      <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=1200&auto=format&fit=crop" alt="">
+
+      <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1200&auto=format&fit=crop" alt="">
+
+      <img src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?q=80&w=1200&auto=format&fit=crop" alt="">
+
+    </div>
+
+  </section>
+
+  <!-- INFO -->
+
+  <section id="info">
+
+    <div class="section-title">
+      <h2>Besuch uns</h2>
+    </div>
+
+    <div class="info-container">
+
+      <div class="card">
+
+        <h3>Adresse</h3>
+
+        <p>
+          Die Kiste<br>
+          Musterstraße 12<br>
+          23552 Lübeck
+        </p>
+
+        <br>
+
+        <p>
+          Direkt im Herzen der Altstadt –
+          perfekt erreichbar für einen spontanen Kneipenabend.
+        </p>
+
+      </div>
+
+      <div class="card hours">
+
+        <h3>Öffnungszeiten</h3>
+
+        <p>Montag – Donnerstag: 17:00 – 01:00</p>
+        <p>Freitag: 17:00 – 03:00</p>
+        <p>Samstag: 15:00 – 03:00</p>
+        <p>Sonntag: 15:00 – 00:00</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer id="contact">
+
+    <div class="footer-grid">
+
+      <div>
+        <h4>Die Kiste</h4>
+
+        <p>
+          Musikkneipe & Bierkultur in Lübeck.
+        </p>
+      </div>
+
+      <div>
+
+        <h4>Kontakt</h4>
+
+        <ul>
+          <li>info@diekiste.de</li>
+          <li>0451 123456</li>
+        </ul>
+
+      </div>
+
+      <div>
+
+        <h4>Rechtliches</h4>
+
+        <ul>
+          <li><a href="/impressum.html">Impressum</a></li>
+          <li><a href="./datasec.html">Datenschutz</a></li>
+        </ul>
+        
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 Die Kiste – Alle Rechte vorbehalten.
+    </div>
+
+  </footer>
+
+  <script>
+
+    // Navbar beim Scrollen abdunkeln
+
+    window.addEventListener("scroll", function(){
+
+      const nav = document.querySelector("nav");
+
+      if(window.scrollY > 50){
+        nav.style.background = "#241812";
+      } else {
+        nav.style.background = "rgba(36,24,18,0.92)";
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
