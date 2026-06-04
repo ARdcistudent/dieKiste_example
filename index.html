@@ -30,7 +30,9 @@
     }
 
     body{
-      font-family:'Roboto', sans-serif;
+      font-family: "Lucida Console", "Courier New", monospace;
+      font-style: italic;
+      /* font-family:'Roboto', sans-serif; */
       background:var(--light);
       color:var(--dark);
       line-height:1.6;
@@ -39,11 +41,15 @@
 
     h1,h2,h3{
       font-family: "Lucida Console", "Courier New", monospace;
+      font-style: italic;
+      font-weight: 900;
       /* font-family:'Oswald', sans-serif; */
       letter-spacing:1px;
     }
 
     a{
+      font-family: "Lucida Console", "Courier New", monospace;
+
       text-decoration:none;
       color:inherit;
     }
@@ -79,6 +85,9 @@
       font-size:2rem;
       font-family:'Oswald', sans-serif;
       font-weight:600;
+    }
+    nav img{
+      width: 250px;
     }
 
     nav ul{
@@ -426,12 +435,18 @@
   <!-- NAVIGATION -->
 
   <nav>
+      <img
+        src="./logo_die_kiste.png"
+        alt="Die Kiste Logo"
+        class="hero-logo2"
 
-    <div class="logo">
+        onerror="this.style.display='none'; document.getElementById('fallback-title').style.display='block';"
+      >
+    <!-- <div class="logo">
       <a href="#">
         Die Kiste
       </a>
-    </div>
+    </div> -->
 
     <ul>
       <li><a href="#about">Über uns</a></li>
