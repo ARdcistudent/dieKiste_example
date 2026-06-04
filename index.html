@@ -259,6 +259,7 @@
     }
 
     .card{
+      min-width: 0;
       background:white;
       padding:45px;
       border-radius:18px;
@@ -268,12 +269,15 @@
     }
 
     .card h3{
+      min-width: 0;
       color:var(--mustard);
       margin-bottom:22px;
-      font-size:2rem;
+      /* font-size:2rem; */
+      font-size:clamp(1.4rem, 5vw, 2rem);
     }
 
     .hours p{
+      overflow-wrap: break-word;
       margin-bottom:12px;
     }
 
@@ -380,6 +384,15 @@
 
     @media(max-width:600px){
 
+      nav ul{
+        gap:12px;
+        font-size:0.9rem;
+      }
+
+      nav{
+        padding:15px;
+      }
+
       .hero{
         padding-top:180px;
       }
@@ -393,11 +406,15 @@
       }
 
       .section-title h2{
-        font-size:2.2rem;
+        font-size:1.8rem;
       }
 
       .card{
         padding:30px;
+      }
+
+      .card h3{
+        font-size:1.1rem;
       }
     }
 
