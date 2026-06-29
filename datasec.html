@@ -75,6 +75,9 @@
       font-family:'Oswald', sans-serif;
       font-weight:600;
     }
+    nav img{
+      width: 250px;
+    }
 
     nav ul{
       display:flex;
@@ -278,11 +281,15 @@
 
   <nav>
 
-    <div class="logo">
-      <a href="./index.html">
-        Die Kiste
-      </a>
-    </div>
+    <a href="./index.html">
+      <img
+        src="./logo_die_kiste.png"
+        alt="Die Kiste Logo"
+        class="hero-logo2"
+
+        onerror="this.style.display='none'; document.getElementById('fallback-title').style.display='block';"
+      >
+    </a>
 
     <ul>
       <li><a href="./index.html#about">Über uns</a></li>
@@ -498,5 +505,6 @@
 
   </footer>
 
+<script src="./app.js"></script>
 </body>
 </html>
