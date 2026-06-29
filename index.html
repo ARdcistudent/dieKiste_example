@@ -330,6 +330,14 @@
       opacity:0.7;
       font-size:0.9rem;
     }
+    
+    .sm_logos {
+    width: 30px;
+    height: 30px;
+
+    margin-top: 10px;
+    margin-bottom: 5px; 
+    }
 
     /* =========================
        ANIMATIONS
@@ -435,6 +443,7 @@
   <!-- NAVIGATION -->
 
   <nav>
+    <a href="#">
       <img
         src="./logo_die_kiste.png"
         alt="Die Kiste Logo"
@@ -442,11 +451,7 @@
 
         onerror="this.style.display='none'; document.getElementById('fallback-title').style.display='block';"
       >
-    <!-- <div class="logo">
-      <a href="#">
-        Die Kiste
-      </a>
-    </div> -->
+    </a>
 
     <ul>
       <li><a href="#about">Über uns</a></li>
@@ -507,29 +512,12 @@
 
       <div class="about-text">
 
-        <p>
-          Willkommen in der Musikkneipe
-          <strong>Die Kiste</strong> –
-          der urigen Bierpub mit Charakter.
-        </p>
-
-        <p>
-          Bei uns treffen handverlesene Musik,
-          frisch gezapftes Bier und echte
-          Kneipenatmosphäre aufeinander.
-        </p>
-
-        <p>
-          Egal ob Feierabendbier,
-          Live-Musik-Abend oder lange Nacht
-          mit Freunden – hier wird jeder
-          Abend besonders.
-        </p>
+        <p><!--Input Sanity --></p>
 
         <a href="#gallery" class="btn">
           Impressionen ansehen
         </a>
-
+        
       </div>
 
     </div>
@@ -572,7 +560,7 @@
 
         <h3>Adresse</h3>
 
-        <p>
+        <p class="address">
           Die Kiste<br>
           Musterstraße 12<br>
           23552 Lübeck
@@ -591,10 +579,11 @@
 
         <h3>Öffnungszeiten</h3>
 
-        <p>Montag – Donnerstag: 17:00 – 01:00</p>
+        <p></p>
+        <!-- <p>Montag – Donnerstag: 17:00 – 01:00</p>
         <p>Freitag: 17:00 – 03:00</p>
         <p>Samstag: 15:00 – 03:00</p>
-        <p>Sonntag: 15:00 – 00:00</p>
+        <p>Sonntag: 15:00 – 00:00</p> -->
 
       </div>
 
@@ -614,6 +603,13 @@
         <p>
           Musikkneipe & Bierkultur in Lübeck.
         </p>
+
+                
+        <a href="https://www.facebook.com/share/1EoJzjitHf/" target="_blank" rel="noopener noreferrer">
+            <img src="./Facebook_Logo_2023.png" alt="fb_logo" class="sm_logos">
+              <p>Besuche uns auf Facebook</p>
+        </a>
+
       </div>
 
       <div>
@@ -621,8 +617,8 @@
         <h4>Kontakt</h4>
 
         <ul>
-          <li>info@diekiste.de</li>
-          <li>0451 123456</li>
+          <li><a href="mailto:bier@diekiste.de">bier@diekiste.de</a></li>
+          <!-- <li>0451 123456</li> -->
         </ul>
 
       </div>
@@ -646,7 +642,8 @@
 
   </footer>
 
-  <script src="./app.js"></script>
+  <script type="module" src="./cms_app.js"></script>
+  <script type="module" src="./app.js"></script>
 
 </body>
 </html>
