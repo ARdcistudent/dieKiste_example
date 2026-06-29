@@ -37,6 +37,9 @@ async function loadHomepage() {
     document.querySelector("#info .address").innerHTML = toHTML(page.infoAddress);
     document.querySelector("#info .hours p").innerHTML = toHTML(page.infoOpeninghours);
 
+    // Kontaktdaten
+
+
     // Impressum
 
 
