@@ -31,19 +31,26 @@
     }
 
     body{
-      font-family:'Roboto', sans-serif;
+      font-family: "Lucida Console", "Courier New", monospace;
+      font-style: italic;
+      /* font-family:'Roboto', sans-serif; */
       background:var(--light);
       color:var(--dark);
-      line-height:1.7;
+      line-height:1.6;
       overflow-x:hidden;
     }
 
-    h1, h2, h3, h4{
-      font-family:"Lucida Console", "Courier New", monospace;
+    h1,h2,h3{
+      font-family: "Lucida Console", "Courier New", monospace;
+      font-style: italic;
+      font-weight: 900;
+      /* font-family:'Oswald', sans-serif; */
       letter-spacing:1px;
     }
 
     a{
+      font-family: "Lucida Console", "Courier New", monospace;
+
       text-decoration:none;
       color:inherit;
     }
@@ -214,6 +221,13 @@
       text-align:center;
       opacity:0.7;
       font-size:0.9rem;
+    }
+    .sm_logos {
+    width: 30px;
+    height: 30px;
+
+    margin-top: 10px;
+    margin-bottom: 5px; 
     }
 
     /* =========================
@@ -472,6 +486,14 @@
         <p>
           Musikkneipe & Bierkultur in Lübeck.
         </p>
+        <a href="https://www.facebook.com/share/1EoJzjitHf/" target="_blank" rel="noopener noreferrer">
+            <img src="./Facebook_Logo_2023.png" alt="fb_logo" class="sm_logos">
+              <p>Besuche uns auf Facebook</p>
+        </a>
+        <a href="https://www.instagram.com/diekiste.luebeck?igsh=b3ZoYWZhNnEyeDF2" target="_blank" rel="noopener noreferrer">
+            <img src="./Instagram_logo_2016.svg.webp" alt="fb_logo" class="sm_logos">
+              <p>Besuche uns auf Instagram</p>
+        </a>
 
       </div>
 
@@ -480,8 +502,8 @@
         <h4>Kontakt</h4>
 
         <ul>
-          <li>info@diekiste.de</li>
-          <li>0451 123456</li>
+          <li><a href="mailto:bier@kiste-luebeck.de">bier@kiste-luebeck.de</a></li>
+          <!-- <li>0451 123456</li> -->
         </ul>
 
       </div>
