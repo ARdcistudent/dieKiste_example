@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ardcistudent.github.io/dieKiste_example/sitemap.xml
