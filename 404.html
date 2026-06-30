@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>404 – Die Kiste</title>
+
+  <meta name="description" content="Diese Seite existiert nicht. Zurück zur Kiste in Lübeck.">
+
+  <style>
+    :root{
+      --mustard: #c89b2b;
+      --brown: #3b2a1f;
+      --dark: #241812;
+      --light: #f7f1e6;
+      --white: #ffffff;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: "Lucida Console", "Courier New", monospace;
+      font-style: italic;
+    }
+
+    body{
+      background: var(--dark);
+      color: var(--light);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+      text-align:center;
+      padding:40px;
+    }
+
+    .box{
+      max-width:600px;
+    }
+
+    h1{
+      font-size:6rem;
+      color: var(--mustard);
+      margin-bottom:10px;
+    }
+
+    h2{
+      font-size:2rem;
+      margin-bottom:20px;
+      color: var(--white);
+    }
+
+    p{
+      font-size:1.1rem;
+      opacity:0.9;
+      margin-bottom:30px;
+      line-height:1.6;
+    }
+
+    a{
+      display:inline-block;
+      padding:14px 28px;
+      background: var(--mustard);
+      color: var(--dark);
+      text-decoration:none;
+      border-radius:999px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    a:hover{
+      background:#a67f1f;
+      transform:translateY(-3px);
+    }
+
+    .hint{
+      margin-top:25px;
+      font-size:0.9rem;
+      opacity:0.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+
+    <h1>404</h1>
+
+    <h2>Hier ist nichts außer leere Gläser 🍺</h2>
+
+    <p>
+      Die Seite, die du suchst, scheint nicht mehr zu existieren
+      oder wurde nie eingeschenkt.
+    </p>
+
+    <a href="/">Zurück zur Kiste</a>
+
+    <div class="hint">
+      Vielleicht hast du zu tief ins Glas geschaut.
+    </div>
+
+  </div>
+
+</body>
+</html>
